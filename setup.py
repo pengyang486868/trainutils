@@ -5,9 +5,9 @@ from setuptools import setup, find_packages
 
 setup(
     name='trainutils',
-    version='0.4.2',
+    version='1.1.0',
     description=(
-        'simple train utils'
+        'Simple train utils - a very elementary but formal version 1.0.0 is available now'
     ),
     long_description=open('README.rst').read(),
     author='Yang Peng',
@@ -16,9 +16,16 @@ setup(
     maintainer_email='854525261@qq.com',
     license='BSD License',
     packages=find_packages(),
-    include_package_data=True,
+    # include_package_data=True,
+    package_data={
+        # If any package contains *.txt files, include them:
+        '': ['*.txt'],
+        # And include any *.dat files found in the 'data' subdirectory
+        # of the 'mypkg' package, also:
+        # 'mypkg': ['data/*.dat'],
+    },
     platforms=["all"],
-    url='https://github.com/pengyang486868',
+    url='https://github.com/pengyang486868/trainutils',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Operating System :: OS Independent',

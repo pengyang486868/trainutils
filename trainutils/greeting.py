@@ -1,9 +1,16 @@
+import os
+
+dirname, filename = os.path.split(os.path.abspath(__file__))
+
+
 def sayhello():
-    f = open('greeting.txt', 'r')
+    # file name fit linux
+    f = open(os.path.join(dirname, 'greeting.txt'), 'r')
     lines = 0
     for row in f:
         lines += 1
         print(row.strip())
+    print()
     print('total', str(lines), 'lines')
 
 
